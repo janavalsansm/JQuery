@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#para").hide();
+            });
+        });
+        // class selectors //
+        $(document).ready(function(){
+            $(".bttn").click(function(){
+                $(".text").hide();
+            });
+        });
+
+        // EVENTS//
+        // click event
+        $(document).ready(function(){
+            $("h4").click(function(){
+                $(".click").animate({left:"400px"})
+            })
+        })
+        // double click 
+        $(document).ready(function(){
+            $("h5").dblclick(function(){
+                $(".click").animate({right:"-400px"})
+            })
+        })
+        // mouse hover
+        $(document).ready(function(){
+            $(".hover").hover(function(){
+                $(this).css("background-color", "red");
+            })
+        })
+
+
+
+    </script> 
+</head>
+<body>
+    <h2>JQuery selectors</h2>
+    <div>
+        <h3>#.Id selector</h3>
+        <p id="para" >.The jQuery element selector selects elements based on the element name</p>
+        <button id="btn">click to hide paragraph</button>
+    </div>
+    <div style="border-bottom: 1px solid black; padding-bottom: 10px;">
+        <h3>#.Class selector</h3>
+        <p class="text">.The jQuery element selector selects elements based on the element name</p>
+        <button class="bttn">click to hide paragraph</button>
+    </div>
+
+    <h2>JQuery Events</h2>
+    <div>
+        <h3>#.click and double click</h3>
+        <p>.The click() method attaches an event handler function to an HTML element. <br>
+            . The function is executed when the user clicks on the HTML element.</p>
+        <h4 style="color: red; font-weight: bolder; font-size: larger;">click me to move the box </h4>
+        <h5 id="animeright" style="color: red; font-weight: bolder; font-size: larger;">double click me to move the box </h5>
+        <div class="click" style="background:#98bf21; height:100px; width:100px; position: relative; ">
+        </div>
+
+        <h3>.mouse hover</h3>
+        <div class="hover" style="background-color: aqua; height:100px; width:100px; ">
+
+
+    </div>
+</body>
+</html>
+
+
