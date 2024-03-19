@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+</head>
+<script>
+    $(document).ready(function(){
+         // set //
+         $("#bta").click(function(){
+            $("#set1").text("text() - Sets or returns the text content of selected elements");
+        })
+        $("#bta").click(function(){
+            $("#set2").text("html() - Sets or returns the content of selected elements (including HTML markup)");
+        })
+        $("#bta").click(function(){
+            $("#set3").text("val() - Sets or returns the value of form fields");
+        })
+        // set html
+        $("#btb").click(function(){
+            $("#heading").html("<i>Get Content - text(), html(), and val()</i>");
+        })
+        $("#btc").click(function(){
+            $("#value").val("Thomas");
+        });
+    })
+</script>
+<body>
+    <div class="setcontent">
+        <h2 id="heading">Set Content - text(), html(), and val()</h2>
+        <p id="set1">text() - </p>
+           <p id="set2">html() - </p>
+          <p id="set3"> val() - </p><br>
+          <label for="">Name :</label>
+            <input type="text" id="value" value="James">
+            <br><br>
+           
+           <button id="bta" type="button">set text</button>
+            <button id="btb" type="button">set Html</button>
+            <button id="btc" type="button">set  value</button>
+    </div>
+</body>
+</html>

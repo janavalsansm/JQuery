@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<script>
+    // get //
+    $(document).ready(function(){
+        $("#bt1").click(function(){
+            alert("Text: "+$("#para").text());
+        })
+        $("#bt2").click(function(){
+            alert("HTML: "+$("#para").html());
+        })
+        $("#bt3").click(function(){
+            alert("Value: "+$("#input").val());
+        })
+       
+    })
+</script>
+<body>
+    <div class="getcontent">
+        <h2 style="text-decoration: underline;">Get Content - text(), html(), and val()</h2>
+        <p id="para">#. <span style="color: red;">text()</span> - Sets or returns the text content of selected elements <br>
+            #. <span style="color: red;">html()</span> - Sets or returns the content of selected elements (including HTML markup) <br>
+            #. <span style="color: red;">val()</span> - Sets or returns the value of form fields</p><br>
+            <label for="">Name :</label>
+            <input type="text" id="input" value="James">
+            <br><br>
+
+            <button id="bt1" type="button">show text</button>
+            <button id="bt2" type="button">show Html</button>
+            <button id="bt3" type="button">show  value</button>
+    </div>
+
+   
+</body>
+</html>

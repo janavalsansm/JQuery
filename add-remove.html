@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#para1").append("Inserts content at the end of the selected elements");
+            $("#para2").append("Inserts content at the beginning of the selected elements");
+            $("#para3").append("Inserts content at the end of the selected elements");
+            $("#para4").append("Inserts content at the end of the selected elements")
+         })
+         $("#btn2").click(function(){
+            $("#para11").prepend("<b>append() -</b>");
+            $("#para22").prepend("<b>prepend() -</b>");
+            $("#para33").prepend("<b>after() -</b>");
+            $("#para44").prepend("<b>before() -</b>")
+         })
+         $("#remove").click(function(){
+            $(".addcontent").remove();
+         })
+
+    })
+</script>
+<body>
+    <div class="addcontent">
+        <h2>jQuery - Add Elements</h2>
+        <h3>#. Append</h3>
+        <p id="para1">append() -</p>
+        <p id="para2">prepend() -</p>
+        <p id="para3">after() -</p>
+        <p id="para4">before() - </p>
+        <button type="button" id="btn1">Append</button><br><br>
+
+        <h3>#. Prepend</h3>
+        <p id="para11">Inserts content at the end of the selected elements</p>
+        <p id="para22">Inserts content at the beginning of the selected elements</p>
+        <p id="para33">Inserts content at the end of the selected elements</p>
+        <p id="para44">Inserts content at the end of the selected elements</p>
+        <button type="button" id="btn2">prepend</button>
+        <br><br>
+        <h2>jQuery remove() Method</h2>
+        <h3>#. remove()</h3>
+        <div>
+    </div>
+
+    <div>
+           <button id="remove">Remove all content in the page</button>
+        </div>
+    </div>
+</body>
+</html>
