@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="fade.css">
+</head>
+<script>
+    // fade in//
+    $(document).ready(function(){
+       $("#fadein").click(function(){
+           $("#div1").fadeIn("");
+           $("#div2").fadeIn("slow");
+           $("#div3").fadeIn("4000");
+       })
+    //    fade out
+       $("#fadeout").click(function(){
+           $("#div11").fadeOut("");
+           $("#div22").fadeOut("slow");
+           $("#div33").fadeOut("4000");
+       })
+         //    fade out
+         $("#fadetoggle").click(function(){
+           $("#div11").fadeToggle("");
+           $("#div22").fadeToggle("slow");
+           $("#div33").fadeToggle("4000");
+       })
+        //    fade to
+        $("#fadeto").click(function(){
+           $("#diva").fadeTo("slow",0.15);
+        //    $("#divb").fadeTo("slow",0.10);
+        //    $("#divc").fadeTo("");
+       })
+   })
+   //    SHOW//
+   $(document).ready(function(){
+    $("#services").mouseover(function(){
+        $(".panel1").slideDown("slow");
+    })
+    $(".effects").click(function(){
+        $(".panel1").slideUp("slow");
+    })
+    $("#btn").click(function(){
+        $(".panel2").slideToggle("slow");
+    })
+   })
+
+   
+</script>
+<body>
+
+    <!-- slidedown and slide up (when click "program" list will slide down
+        when click anywhere in the page it will slide up)-->
+
+        <!-- slide toggle (click the conact us button to show details) -->
+    <div class="navbar">
+        <nav>
+            <label style="margin-right: 20px;" for="">HOME</label>
+            <label id="services" style="margin-right: 20px;" for="">SERVICES</label>
+            <label for="" style="margin-right: 20px;">ABOUT</label>
+            <button type="button" id="btn">Contact us</button>
+            
+
+        </nav>
+    </div>
+    <div class="panel1">
+        <ul>
+            <li>service1</li>
+            <li>service2</li>
+            <li>service3</li>
+            <li>service4</li>
+        </ul>
+    </div>
+    <div class="panel2">
+        <ul>
+            <li>Whatsapp</li>
+            <li>LinkedIn</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+        </ul>
+    </div>
+    <div class="effects" style="margin-top: 20px;padding-top: 20px;padding-left: 20px; ">
+
+        
+        <h3 style="text-decoration: underline;">.fadein() </h3>
+
+        <button id="fadein"> fade in boxes</button><br><br>
+
+    
+            <div class="fade-in" style="margin-bottom: 30px;">
+                <div id="div1" style="background:red; height:70px; width:70px;display: none;"></div><br>
+                <div id="div2" style="background:green; height:70px; width:70px; display: none;"></div><br>
+                <div id="div3" style="background:blue; height:70px; width:70px;display: none;"></div><br>
+    
+            </div>
+
+            <h3 style="text-decoration: underline;">.fadeout() and fadetoggle()</h3>
+            <button id="fadeout"> fade out boxes</button><br><br>
+            <button id="fadetoggle"> fade out and in boxes</button><br><br>
+            <div class="fade-out">
+                <div id="div11" style="background:red; height:70px; width:70px;"></div><br>
+                <div id="div22" style="background:green; height:70px; width:70px;"></div><br>
+                <div id="div33" style="background:blue; height:70px; width:70px;"></div><br>
+    
+            </div>
+
+            <h3 style="text-decoration: underline;">.fadeto() </h3>
+
+        <button id="fadeto"> fade to</button><br><br>
+            <div class="fade-to">
+                <div id="diva" style="background:red; height:70px; width:70px;"></div><br>
+                <!-- <div id="divb" style="background:green; height:70px; width:70px;"></div><br>
+                <div id="divc" style="background:blue; height:70px; width:70px;"></div><br> -->
+            </div>
+    </div>
+    
+</body>
+</html>

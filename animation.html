@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    
+</head>
+<script>
+    $(document).ready(function(){
+        $("#div11").mouseover(function(){
+            $("#div11").animate({
+                width:"250px",
+                height:"250px",
+            })
+        })
+        $("#div11").mouseleave(function(){
+            $("#div11").animate({
+                width:"70px",
+                height:"70px",  
+            })
+        })  
+        $("#anime").click(function(){
+            var div = $("#diva");
+            div.animate({height:"300px",opacity:"0.4"},"slower")
+            div.animate({width:"300px",opacity:"0.8"},"slower")
+            div.animate({height:"70px",opacity:"0.4"},"slower")
+            div.animate({width:"70px",opacity:"0.8"},"slower")    
+        }) 
+    })
+</script>
+<body>
+    <div class="container">
+        <div>
+            <h2 style="text-decoration: underline;">jQuery animate() - Manipulate Multiple Properties</h2>
+            <p><h3>Notice that multiple properties can be animated at the same time:</h3> 
+            when cursor over the box  size of the box will increase and when the cursor will leave the box then return to the original size</p>
+            <div id="div11" style="background:red; height:70px; width:70px; margin-left: 100px;"></div>
+        </div>
+
+        <div>
+            <h2 style="text-decoration: underline;">jQuery animate() - Uses Queue Functionality</h2>
+            <button id="anime" type="button" style="width: 150px;height: 30px;font-size: large;font-weight: bold;border-radius: 5px;">ANIMATE</button><br><br>
+            <div id="diva" style="background:red; height:70px; width:70px; margin-left: 20px;"></div>
+        </div>
+
+        <div>
+            <h2 style="text-decoration: underline;">jQuery animate() - Using Pre-defined Values</h2>
+            <button id="anime2" type="button" style="width: 150px;height: 30px;font-size: large;font-weight: bold;border-radius: 5px;">ANIMATE</button><br><br>
+            <div id="divb" style="background:red; height:200px; width:200px; margin-left: 20px;"></div>
+        </div>
+
+    </div>
+</body>
+</html>

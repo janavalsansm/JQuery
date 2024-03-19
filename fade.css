@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    text-align: right;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    background-color: black;
+    height: 50px; 
+    padding-top: 10px;
+    padding-right: 60px; 
+
+}
+.panel1{
+
+    display: none;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+}
+.panel2{
+    width: 200px;
+    height: auto;
+    display: none;
+    background-color: black;
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    float: right;
+    text-align: center;
+}
+.navbar button{
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(8, 253, 139);
+    color: black;
+    width: 150px;
+    height: 30px;
+    font-size: large;
+    font-weight: bold;
+}

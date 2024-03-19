@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="jquery.css">
     <script>
         $(document).ready(function(){
             $("#btn").click(function(){
@@ -38,9 +39,31 @@
                 $(this).css("background-color", "red");
             })
         })
-
-
-
+        // mouse down
+        $(document).ready(function(){
+            $(".mousedown").mousedown(function(){
+                alert("mouse button is down");
+            })
+        })
+           // mouse leave
+           $(document).ready(function(){
+            $(".mouseleave").mouseleave(function(){
+                alert("cursor released from box");
+            })
+        })
+        // hide show//
+        $(document).ready(function(){
+            $("#btnhide").click(function(){
+                $("#hideshow").hide();
+            });
+            $("#btnshow").click(function(){
+                $("#hideshow").show();
+            });
+            $("#btntoggle").click(function(){
+                $("#hideshow").toggle();
+            });
+        });
+       
     </script> 
 </head>
 <body>
@@ -66,11 +89,25 @@
         <div class="click" style="background:#98bf21; height:100px; width:100px; position: relative; ">
         </div>
 
-        <h3>.mouse hover</h3>
+        <h3>.mousehover</h3>
         <div class="hover" style="background-color: aqua; height:100px; width:100px; ">
+        </div>
 
+        <h3>.mousedown</h3>
+        <div class="mousedown">press here</div>
+        <h3>.mouseleave</h3>
+        <div class="mouseleave">!!!</div>
 
-    </div>
+        <div style="border-top: 1px solid black; padding-top: 20px;padding-bottom: 30px; margin-top: 20px;">
+            <h2>#. Hide/Show/Toggle</h2>
+            <p id="hideshow" >.The jQuery element selector selects elements based on the element name</p>
+            <button id="btnhide">HIDE</button>
+            <button id="btnshow">SHOW</button>
+            <button id="btntoggle">TOGGLE</button>
+
+        </div>
+
+        
 </body>
 </html>
 

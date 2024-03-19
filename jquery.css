@@ -1,0 +1,14 @@
+.mousedown{
+    margin: 10px;
+    padding: 12px;
+    width: 60px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+.mouseleave{
+    margin: 10px;
+    padding: 12px;
+    width: 60px;
+    cursor: pointer;
+    border: 2px solid black;
+}
