@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("h2").addClass("head1");
+            $("h3").addClass("hh3");
+            $("span").addClass("pspan");
+
+        })
+        $("#btn2").click(function(){
+            $("h2").removeClass("head1");
+            $("h3").removeClass("hh3");
+            $("span").removeClass("pspan");
+
+        })
+        $("#btn3").click(function(){
+            $("h2").toggleClass("head1");
+            $("h3").toggleClass("hh3");
+            $("span").toggleClass("pspan");
+
+        })
+
+    })
+</script>
+<style>
+    .pspan{
+        color: red;
+        font-weight: bolder;
+    }
+    .head1{
+        color: blue;
+        text-decoration: underline;
+        font-style: italic;
+    }
+    .hh3{
+        color: red;
+        font-style: oblique;
+    }
+</style>
+<body>
+    <div>
+        <h2>jQuery Manipulating CSS</h2>
+        <h3>jQuery has several methods for CSS manipulation. We will look at the following methods:</h3>
+        <p>
+            <span>#.addClass() </span>- Adds one or more classes to the selected elements <br><br>
+            <span>#.removeClass()</span> - Removes one or more classes from the selected elements <br><br>
+            <span>#.toggleClass()</span> - Toggles between adding/removing classes from the selected elements <br><br>
+        </p>
+        <button id="btn1">Add class</button>
+        <button id="btn2">Remove class</button>
+        <button id="btn3">Toggle class</button>
+    </div>
+</body>
+</html>
